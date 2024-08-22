@@ -60,10 +60,7 @@ class SimpleImage:
         return instance
 
     @classmethod
-    def invalid_class_method(not_cls, width, height):
-        """
-        This class method should have 'cls' as its first argument.
-        """
+    def some_class_method(not_cls, width, height):
         instance = not_cls.__new__(not_cls)
         instance.image = Image.new('RGB', (width, height))
         instance.pixels = instance.image.load()
