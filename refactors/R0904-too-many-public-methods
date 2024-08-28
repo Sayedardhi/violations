@@ -42,53 +42,52 @@ class SimpleImage:
 
     # Color detection methods
     def is_blue(self, x, y):
-        # ...
+        pass
     def is_red(self, x, y):
-        # ...
+        pass
     def is_green(self, x, y):
-        # ...
-    # ... many more color detection methods ...
+      pass
+   
 
     # Image manipulation methods
     def invert_colors(self):
-        # ...
+        pass
     def grayscale(self):
-        # ...
+        pass
     def blur(self):
-        # ...
+        pass
     def sharpen(self):
-        # ...
+        pass
     def rotate_left(self):
-        # ...
+       pass
     def rotate_right(self):
-        # ...
+       pass
     def flip_horizontal(self):
-        # ...
+       pass
     def flip_vertical(self):
-        # ...
-    # ... many more image manipulation methods ...
-
+      pass
+   
     # Additional methods
     def get_dominant_color(self):
-        # ...
+       pass
     def get_histogram(self):
-        # ...
+       pass
     def resize(self, width, height):
-        # ...
+       pass
     def crop(self, x1, y1, x2, y2):
-        # ...
+       pass
     def paste(self, other_image, x, y):
-        # ...
+       pass
     def add_noise(self, intensity):
-        # ...
+       pass
     def remove_noise(self):
-        # ...
+        pass
     def detect_edges(self):
-        # ...
+       pass
     def detect_faces(self):
-        # ...
+        pass
     def detect_objects(self):
-        # ...
+       pass
 
 
 def do_front(front_filename, back_filename):
