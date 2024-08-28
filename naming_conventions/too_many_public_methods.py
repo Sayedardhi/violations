@@ -71,8 +71,7 @@ class SimpleImage:
         Returns:
             bool: True if the pixel is predominantly blue, False otherwise.
         """
-        # ... implementation
-        return True
+        pass
 
     # ... other color detection methods ...
 
@@ -81,14 +80,12 @@ class SimpleImage:
         """
         Inverts the colors of the image.
         """
-        # ... implementation
         pass
 
     def grayscale(self):
         """
         Converts the image to grayscale.
         """
-        # ... implementation
         pass
 
     # ... other image manipulation methods ...
@@ -101,8 +98,7 @@ class SimpleImage:
         Returns:
             tuple: A tuple representing the RGB values of the dominant color.
         """
-        # ... implementation
-        return (0, 0, 0)
+        pass
 
     def get_histogram(self):
         """
@@ -111,8 +107,7 @@ class SimpleImage:
         Returns:
             dict: A dictionary where keys are color tuples and values are their frequencies.
         """
-        # ... implementation
-        return {}
+        pass
 
     def resize(self, width, height):
         """
@@ -122,7 +117,6 @@ class SimpleImage:
             width (int): The new width of the image.
             height (int): The new height of the image.
         """
-        # ... implementation
         pass
 
     def crop(self, x1, y1, x2, y2):
@@ -136,7 +130,6 @@ class SimpleImage:
             y2 (int): The   
  y-coordinate of the bottom-right corner.
         """
-        # ... implementation
         pass
 
     def paste(self, other_image, x, y):
@@ -148,7 +141,6 @@ class SimpleImage:
             x (int): The x-coordinate of the top-left corner of the pasted image.
             y (int): The y-coordinate of the top-left corner of the pasted image.
         """
-        # ... implementation
         pass
 
     def add_noise(self, intensity):
@@ -158,14 +150,12 @@ class SimpleImage:
         Args:
             intensity (float): The intensity of the noise.
         """
-        # ... implementation
         pass
 
     def remove_noise(self):
         """
         Removes noise from the image.
         """
-        # ... implementation
         pass
 
     def detect_edges(self):
@@ -175,8 +165,7 @@ class SimpleImage:
         Returns:
             Image: An image representing the detected edges.
         """
-        # ... implementation
-        return Image.new("RGB", (self.width, self.height))
+        pass
 
     def detect_faces(self):
         """
@@ -185,8 +174,7 @@ class SimpleImage:
         Returns:
             list: A list of bounding boxes representing the detected faces.
         """
-        # ... implementation
-        return []
+        pass
 
     def detect_objects(self):
         """
@@ -195,8 +183,7 @@ class SimpleImage:
         Returns:
             list: A list of bounding boxes representing the detected objects.
         """
-        # ... implementation
-        return []
+        pass
 
 def do_front(front_filename, back_filename):
     """
