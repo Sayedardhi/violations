@@ -40,7 +40,7 @@ class SimpleImage:
         """
         self.image.show()
 
-     def in_bounds(self, x, y):
+    def in_bounds(self, x, y):
         """
         Checks if the given coordinates are within the image bounds.
 
