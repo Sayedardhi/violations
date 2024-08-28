@@ -1,12 +1,3 @@
-#!/usr/bin/env python3
-
-"""
-Stanford Bluescreen Example
-Shows front and back strategies.
-The functions are mostly complete,
-missing only the key if-logic line.
-"""
-
 import sys
 from PIL import Image
 
@@ -49,68 +40,55 @@ class SimpleImage:
         """
         self.image.show()
 
+    # Color detection methods
     def is_blue(self, x, y):
-        """
-        Checks if the pixel at (x, y) is predominantly blue.
-        """
-        pixel = self.get_pixel(x, y)
-        return pixel[2] > 2 * max(pixel[0], pixel[1])
-
+        # ...
     def is_red(self, x, y):
-        """
-        Checks if the pixel at (x, y) is predominantly red.
-        """
-        pixel = self.get_pixel(x, y)
-        return pixel[0] > 2 * max(pixel[1], pixel[2])
-
+        # ...
     def is_green(self, x, y):
-        """
-        Checks if the pixel at (x, y) is predominantly green.
-        """
-        pixel = self.get_pixel(x, y)
-        return pixel[1] > 2 * max(pixel[0], pixel[2])
+        # ...
+    # ... many more color detection methods ...
 
-    def is_yellow(self, x, y):
-        """
-        Checks if the pixel at (x, y) is predominantly yellow.
-        """
-        pixel = self.get_pixel(x, y)
-        return pixel[0] > 2 * pixel[1] and pixel[0] > 2 * pixel[2]
+    # Image manipulation methods
+    def invert_colors(self):
+        # ...
+    def grayscale(self):
+        # ...
+    def blur(self):
+        # ...
+    def sharpen(self):
+        # ...
+    def rotate_left(self):
+        # ...
+    def rotate_right(self):
+        # ...
+    def flip_horizontal(self):
+        # ...
+    def flip_vertical(self):
+        # ...
+    # ... many more image manipulation methods ...
 
-    def is_orange(self, x, y):
-        """
-        Checks if the pixel at (x, y) is predominantly orange.
-        """
-        pixel = self.get_pixel(x, y)
-        return pixel[0] > 2 * pixel[1] and pixel[2] > 2 * pixel[1]
-
-    def is_purple(self, x, y):
-        """
-        Checks if the pixel at (x, y) is predominantly purple.
-        """
-        pixel = self.get_pixel(x, y)
-        return pixel[2] > 2 * pixel[0] and pixel[2] > 2 * pixel[1]
-
-    def is_white(self, x, y):
-        """
-        Checks if the pixel at (x, y) is predominantly white.
-        """
-        pixel = self.get_pixel(x, y)
-        return pixel[0] > 200 and pixel[1] > 200 and pixel[2] > 200
-
-    def is_black(self, x, y):
-        """
-        Checks if the pixel at (x, y) is predominantly black.
-        """
-        pixel = self.get_pixel(x, y)
-        return pixel[0] < 50 and pixel[1] < 50 and pixel[2] < 50
-
-    def is_gray(self, x, y):
-        """
-        Checks if the pixel at (x, y) is predominantly gray.
-        """
-        pixel = self.get_pixel(x, y)
-        return abs(pixel[0] - pixel[1]) < 50 and abs(pixel[0] - pixel[2]) < 50 and abs(pixel[1] - pixel[2]) < 50
+    # Additional methods
+    def get_dominant_color(self):
+        # ...
+    def get_histogram(self):
+        # ...
+    def resize(self, width, height):
+        # ...
+    def crop(self, x1, y1, x2, y2):
+        # ...
+    def paste(self, other_image, x, y):
+        # ...
+    def add_noise(self, intensity):
+        # ...
+    def remove_noise(self):
+        # ...
+    def detect_edges(self):
+        # ...
+    def detect_faces(self):
+        # ...
+    def detect_objects(self):
+        # ...
 
 
 def do_front(front_filename, back_filename):
@@ -125,8 +103,6 @@ def do_front(front_filename, back_filename):
     back_image = SimpleImage(back_filename)
     for y in range(front_image.height):
         for x in range(front_image.width):
-            pixel = front_image.get_pixel(x, y)
-
             # Detect blue pixels in front and replace with back pixels
             if front_image.is_blue(x, y):  # Use the helper method
                 back_pixel = back_image.get_pixel(x, y)
@@ -148,8 +124,6 @@ def do_back(front_filename, shift_x, shift_y, back_filename):
     # to background
     for y in range(image.height):
         for x in range(image.width):
-            pixel = image.get_pixel(x, y)
-
             # Detect non-blue pixels and copy to back
             if not front_image.is_blue(x, y):  # Use the helper method
                 dest_x = x + shift_x
